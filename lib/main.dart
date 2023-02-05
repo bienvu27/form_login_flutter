@@ -14,6 +14,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        body: Container(
+          constraints: const BoxConstraints.expand(),
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: const [
+              FlutterLogo(),
+            ],
+          ),
+        ),
       ),
     );
   }
