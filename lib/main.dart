@@ -75,25 +75,50 @@ class _MyAppState extends State<MyApp> {
                   ],
                 ),
               ),
-              SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton(
-                      onPressed: onSignInClicked,
-                      style: ElevatedButton.styleFrom(
-                          side: const BorderSide(
-                              width: 1,
-                            color: Colors.blue
-                          )
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: SizedBox(
+                    width: double.infinity,
+                    height: 56,
+                    child: ElevatedButton(
+                        onPressed: onSignInClicked,
+                        style: ElevatedButton.styleFrom(
+                            side:
+                                const BorderSide(width: 1, color: Colors.blue)),
+                        child: const Text(
+                          'SIGN IN',
+                          style: TextStyle(fontSize: 16),
+                        ))),
+              ),
+              Container(
+                height: 130,
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                     Text(
+                      'New User? Sign Up',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Color(0xff888888),
                       ),
-                      child: const Text(
-                        'SIGN IN',
-                      )))
+                    ),
+                    Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
       ),
     );
   }
-  void onSignInClicked(){}
+
+  void onSignInClicked() {}
 }
